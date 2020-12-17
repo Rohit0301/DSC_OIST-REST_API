@@ -4,7 +4,7 @@ from django.db import models
 class TeamMember(models.Model):
     fullname=models.CharField(max_length=30)
     designation=models.CharField(max_length=30)
-    member_picture=models.ImageField(upload_to='static/images/')
+    member_picture=models.ImageField(upload_to='static/images/',null=True)
     linkedin_url=models.URLField()
     instagram_url=models.URLField()
 
