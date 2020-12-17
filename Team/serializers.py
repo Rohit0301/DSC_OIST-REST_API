@@ -1,8 +1,7 @@
 from rest_framework import serializers
-from .models import TeamMembers
+from .models import TeamMember
 class TeamMembersSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model=TeamMembers
-        fields=['fullname','designation','member_picture','linkedin_url','instagram_url']
-        
+        model=TeamMember
+        fields=['id','fullname','designation','member_picture','linkedin_url','instagram_url']
