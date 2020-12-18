@@ -5,7 +5,7 @@ from .serializers import ResourcesSerializer
 from rest_framework import permissions
 # Create your views here.
 
-class ResourseListView(ListAPIView):
+class ResourceListView(ListAPIView):
     serializer_class=ResourcesSerializer
 
     def get_queryset(self):
@@ -21,7 +21,7 @@ class ResourceCreateView(CreateAPIView):
 class ResourceDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class=ResourcesSerializer
     # permission_classes=(permissions.IsAuthenticated,)
-    lookup_field="id"
+    lookup_field="name"
         
     def get_queryset(self):
-        return Resource.objects.filter(id=self.kwargs['id'])
+        return Resource.objects.filter(name=self.kwargs['name'])
