@@ -21,7 +21,7 @@ class EventCreateView(CreateAPIView):
 class EventDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class=EventsSerializer
     # permission_classes=(permissions.IsAuthenticated,)
-    lookup_field="id"
+    lookup_field="title"
         
     def get_queryset(self):
-        return Event.objects.filter(id=self.kwargs['id'])
+        return Event.objects.filter(title=self.kwargs['title'])
