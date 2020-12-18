@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Team',
+    'Events',
     'drf_yasg',
     'rest_framework',
     'django.contrib.admin',

@@ -25,5 +25,4 @@ class TeamMemberDetailView(RetrieveUpdateDestroyAPIView):
     lookup_field="id"
         
     def get_queryset(self):
-        # print(self.kwargs['id'])
         return TeamMember.objects.filter(id=self.kwargs['id'])
