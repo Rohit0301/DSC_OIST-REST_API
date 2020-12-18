@@ -22,7 +22,8 @@ class TeamMemberCreateView(CreateAPIView):
 class TeamMemberDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class=TeamMembersSerializer
     # permission_classes=(permissions.IsAuthenticated,)
-    lookup_field="id"
+    lookup_field="fullname"
         
     def get_queryset(self):
-        return TeamMember.objects.filter(id=self.kwargs['id'])
+        
+        return TeamMember.objects.filter(fullname__contains=self.kwargs['fullname'])
