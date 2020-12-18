@@ -8,7 +8,7 @@ class Event(models.Model):
     speaker=models.CharField(max_length=30)
     date=models.DateField()
     time=models.TimeField()
-    youtube_url=models.URLField(null=True)
+    event_url=models.URLField(null=True)
 
     def __str__(self):
         return self.title
