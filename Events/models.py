@@ -9,3 +9,6 @@ class Event(models.Model):
     date=models.DateField()
     time=models.TimeField()
     youtube_url=models.URLField(null=True)
+
+    def __str__(self):
+        return self.title
