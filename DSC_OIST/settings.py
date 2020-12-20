@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'Team',
     'Events',
     'Resources',
+    'Account',
     'drf_yasg',
     'rest_framework',
     'django.contrib.admin',
@@ -129,3 +130,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# LOGIN_URL = 'rest_framework:schema-swagger-ui'
+LOGOUT_URL = 'DSC_OIST:schema-swagger-ui'
