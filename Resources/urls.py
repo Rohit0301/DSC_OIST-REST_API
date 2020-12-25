@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import path,include
-from .views import ResourceListView,ResourceCreateView,ResourceDetailView
+from .views import ResourceListView,ResourceDetailView
 urlpatterns = [
-  path('AllResources/',ResourceListView.as_view()),
-  path('AddNewResource/',ResourceCreateView.as_view()),
+  path('Resource/',ResourceListView.as_view()),
+  # path('AddNewResource/',ResourceCreateView.as_view()),
   path('Resource/<name>/',ResourceDetailView.as_view()),
 ]
